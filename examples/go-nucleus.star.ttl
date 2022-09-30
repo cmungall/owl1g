@@ -1,0 +1,619 @@
+@prefix : <http://purl.obolibrary.org/obo/go-test.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.obolibrary.org/obo/go-test.owl> .
+
+<http://purl.obolibrary.org/obo/go-test.owl> rdf:type owl:Ontology ;
+                                              owl:versionIRI <http://purl.obolibrary.org/obo/go-test/releases/2016-10-22/go-test.owl> ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion> "1.2"^^xsd:string .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+<http://purl.obolibrary.org/obo/IAO_0000115> rdf:type owl:AnnotationProperty ;
+                                             rdfs:label "definition" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000231
+<http://purl.obolibrary.org/obo/IAO_0000231> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000589
+<http://purl.obolibrary.org/obo/IAO_0000589> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0100001
+<http://purl.obolibrary.org/obo/IAO_0100001> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/go-test#goantislim_grouping
+<http://purl.obolibrary.org/obo/go-test#goantislim_grouping> rdf:type owl:AnnotationProperty ;
+                                                             rdfs:comment "Grouping classes that can be excluded" ;
+                                                             rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#gocheck_do_not_annotate
+<http://purl.obolibrary.org/obo/go-test#gocheck_do_not_annotate> rdf:type owl:AnnotationProperty ;
+                                                                 rdfs:comment "Term not to be used for direct annotation" ;
+                                                                 rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#gocheck_do_not_manually_annotate
+<http://purl.obolibrary.org/obo/go-test#gocheck_do_not_manually_annotate> rdf:type owl:AnnotationProperty ;
+                                                                          rdfs:comment "Term not to be used for direct manual annotation" ;
+                                                                          rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#goslim_aspergillus
+<http://purl.obolibrary.org/obo/go-test#goslim_aspergillus> rdf:type owl:AnnotationProperty ;
+                                                            rdfs:comment "Aspergillus GO slim" ;
+                                                            rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#goslim_candida
+<http://purl.obolibrary.org/obo/go-test#goslim_candida> rdf:type owl:AnnotationProperty ;
+                                                        rdfs:comment "Candida GO slim" ;
+                                                        rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#goslim_chembl
+<http://purl.obolibrary.org/obo/go-test#goslim_chembl> rdf:type owl:AnnotationProperty ;
+                                                       rdfs:comment "ChEMBL protein targets summary" ;
+                                                       rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#goslim_generic
+<http://purl.obolibrary.org/obo/go-test#goslim_generic> rdf:type owl:AnnotationProperty ;
+                                                        rdfs:comment "Generic GO slim" ;
+                                                        rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#goslim_goa
+<http://purl.obolibrary.org/obo/go-test#goslim_goa> rdf:type owl:AnnotationProperty ;
+                                                    rdfs:comment "GOA and proteome slim" ;
+                                                    rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#goslim_metagenomics
+<http://purl.obolibrary.org/obo/go-test#goslim_metagenomics> rdf:type owl:AnnotationProperty ;
+                                                             rdfs:comment "Metagenomics GO slim" ;
+                                                             rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#goslim_pir
+<http://purl.obolibrary.org/obo/go-test#goslim_pir> rdf:type owl:AnnotationProperty ;
+                                                    rdfs:comment "PIR GO slim" ;
+                                                    rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#goslim_plant
+<http://purl.obolibrary.org/obo/go-test#goslim_plant> rdf:type owl:AnnotationProperty ;
+                                                      rdfs:comment "Plant GO slim" ;
+                                                      rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#goslim_pombe
+<http://purl.obolibrary.org/obo/go-test#goslim_pombe> rdf:type owl:AnnotationProperty ;
+                                                      rdfs:comment "Fission yeast GO slim" ;
+                                                      rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#goslim_synapse
+<http://purl.obolibrary.org/obo/go-test#goslim_synapse> rdf:type owl:AnnotationProperty ;
+                                                        rdfs:comment "synapse GO slim" ;
+                                                        rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#goslim_virus
+<http://purl.obolibrary.org/obo/go-test#goslim_virus> rdf:type owl:AnnotationProperty ;
+                                                      rdfs:comment "Viral GO slim" ;
+                                                      rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#goslim_yeast
+<http://purl.obolibrary.org/obo/go-test#goslim_yeast> rdf:type owl:AnnotationProperty ;
+                                                      rdfs:comment "Yeast GO slim" ;
+                                                      rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#gosubset_prok
+<http://purl.obolibrary.org/obo/go-test#gosubset_prok> rdf:type owl:AnnotationProperty ;
+                                                       rdfs:comment "Prokaryotic GO subset" ;
+                                                       rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#mf_needs_review
+<http://purl.obolibrary.org/obo/go-test#mf_needs_review> rdf:type owl:AnnotationProperty ;
+                                                         rdfs:comment "Catalytic activity terms in need of attention" ;
+                                                         rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#syngo_official_label
+<http://purl.obolibrary.org/obo/go-test#syngo_official_label> rdf:type owl:AnnotationProperty ;
+                                                              rdfs:label "label approved by the SynGO project" ;
+                                                              rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#systematic_synonym
+<http://purl.obolibrary.org/obo/go-test#systematic_synonym> rdf:type owl:AnnotationProperty ;
+                                                            <http://www.geneontology.org/formats/oboInOwl#hasScope> <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> ;
+                                                            rdfs:label "Systematic synonym" ;
+                                                            rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#termgenie_unvetted
+<http://purl.obolibrary.org/obo/go-test#termgenie_unvetted> rdf:type owl:AnnotationProperty ;
+                                                            rdfs:comment "Terms created by TermGenie that do not follow a template and require additional vetting by editors" ;
+                                                            rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://purl.obolibrary.org/obo/go-test#virus_checked
+<http://purl.obolibrary.org/obo/go-test#virus_checked> rdf:type owl:AnnotationProperty ;
+                                                       rdfs:comment "Viral overhaul terms" ;
+                                                       rdfs:subPropertyOf <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> .
+
+
+###  http://w3id.org/owl1g/interpretation
+<http://w3id.org/owl1g/interpretation> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#SubsetProperty
+<http://www.geneontology.org/formats/oboInOwl#SubsetProperty> rdf:type owl:AnnotationProperty ;
+                                                              rdfs:label "subset_property" .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty
+<http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty> rdf:type owl:AnnotationProperty ;
+                                                                   rdfs:label "synonym_type_property" .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasAlternativeId
+<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> rdf:type owl:AnnotationProperty ;
+                                                                rdfs:label "has_alternative_id" .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasDbXref
+<http://www.geneontology.org/formats/oboInOwl#hasDbXref> rdf:type owl:AnnotationProperty ;
+                                                         rdfs:label "database_cross_reference" .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasExactSynonym
+<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> rdf:type owl:AnnotationProperty ;
+                                                               rdfs:label "has_exact_synonym" .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion
+<http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion> rdf:type owl:AnnotationProperty ;
+                                                                   rdfs:label "has_obo_format_version" .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasOBONamespace
+<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> rdf:type owl:AnnotationProperty ;
+                                                               rdfs:label "has_obo_namespace" .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym
+<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> rdf:type owl:AnnotationProperty ;
+                                                                 rdfs:label "has_related_synonym" .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasScope
+<http://www.geneontology.org/formats/oboInOwl#hasScope> rdf:type owl:AnnotationProperty ;
+                                                        rdfs:label "has_scope" .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasSynonymType
+<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> rdf:type owl:AnnotationProperty ;
+                                                              rdfs:label "has_synonym_type" .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#id
+<http://www.geneontology.org/formats/oboInOwl#id> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#inSubset
+<http://www.geneontology.org/formats/oboInOwl#inSubset> rdf:type owl:AnnotationProperty ;
+                                                        rdfs:label "in_subset" .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#shorthand
+<http://www.geneontology.org/formats/oboInOwl#shorthand> rdf:type owl:AnnotationProperty ;
+                                                         rdfs:label "shorthand" .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000050
+<http://purl.obolibrary.org/obo/BFO_0000050> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/go-test#has_part> ;
+                                             rdf:type owl:TransitiveProperty ;
+                                             <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "BFO:0000050" ;
+                                             <http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> "external" ;
+                                             <http://www.geneontology.org/formats/oboInOwl#id> "part_of" ;
+                                             <http://www.geneontology.org/formats/oboInOwl#shorthand> "part_of" ;
+                                             rdfs:label "part of" .
+
+
+###  http://purl.obolibrary.org/obo/go-test#has_part
+<http://purl.obolibrary.org/obo/go-test#has_part> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/GO_0005575
+<http://purl.obolibrary.org/obo/GO_0005575> rdf:type owl:Class ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000115> "The part of a cell or its extracellular environment in which a gene product is located. A gene product may be located in one or more parts of a cell and its location may be as specific as a particular macromolecular complex, that is, a stable, persistent association of macromolecules that function together." ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> "GO:0008372" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NIF_Subcellular:sao-1337158144"^^xsd:string ,
+                                                                                                     "NIF_Subcellular:sao1337158144" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "cell or subcellular entity" ,
+                                                                                                           "cellular component" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> "cellular_component" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "subcellular entity" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#id> "GO:0005575" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#goslim_aspergillus> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_candida> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_chembl> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_generic> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_metagenomics> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_pir> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_plant> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_yeast> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#gosubset_prok> ;
+                                            rdfs:comment "Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. Note that when this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code ND, no data, is used to indicate this." ;
+                                            rdfs:label "cellular_component" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0005575> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "The part of a cell or its extracellular environment in which a gene product is located. A gene product may be located in one or more parts of a cell and its location may be as specific as a particular macromolecular complex, that is, a stable, persistent association of macromolecules that function together." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:go_curators"^^xsd:string ,
+                                                            "NIF_Subcellular:sao-1337158144"^^xsd:string
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0005575> ;
+   owl:annotatedProperty <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> ;
+   owl:annotatedTarget "cellular component" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/go-test#systematic_synonym>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0005575> ;
+   owl:annotatedProperty <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> ;
+   owl:annotatedTarget "subcellular entity" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NIF_Subcellular:nlx_subcell_100315"^^xsd:string
+ ] .
+
+
+###  http://purl.obolibrary.org/obo/GO_0005622
+<http://purl.obolibrary.org/obo/GO_0005622> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/GO_0044464> .
+
+
+###  http://purl.obolibrary.org/obo/GO_0005623
+<http://purl.obolibrary.org/obo/GO_0005623> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/GO_0005575> .
+
+
+###  http://purl.obolibrary.org/obo/GO_0005634
+<http://purl.obolibrary.org/obo/GO_0005634> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/GO_0043231> ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000115> "A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated. In most cells, the nucleus contains all of the cell's chromosomes except the organellar chromosomes, and is the site of RNA synthesis and processing. In some species, or in specialized cell types, RNA metabolism or DNA replication may be absent." ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NIF_Subcellular:sao1702920020" ,
+                                                                                                     "Wikipedia:Cell_nucleus" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "cell nucleus" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> "cellular_component" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#id> "GO:0005634" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#goslim_aspergillus> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_candida> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_chembl> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_generic> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_metagenomics> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_pir> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_plant> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_yeast> ;
+                                            rdfs:label "nucleus" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0005634> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated. In most cells, the nucleus contains all of the cell's chromosomes except the organellar chromosomes, and is the site of RNA synthesis and processing. In some species, or in specialized cell types, RNA metabolism or DNA replication may be absent." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:go_curators"^^xsd:string
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0005634> ;
+   owl:annotatedProperty <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> ;
+   owl:annotatedTarget "cell nucleus" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/go-test#systematic_synonym>
+ ] .
+
+
+###  http://purl.obolibrary.org/obo/GO_0008372
+<http://purl.obolibrary.org/obo/GO_0008372> rdf:type owl:Class ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000231> <http://purl.obolibrary.org/obo/IAO_0000227> ;
+                                            <http://purl.obolibrary.org/obo/IAO_0100001> <http://purl.obolibrary.org/obo/GO_0005575> ;
+                                            owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.obolibrary.org/obo/GO_0043226
+<http://purl.obolibrary.org/obo/GO_0043226> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/GO_0005575> ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000115> "Organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, and prokaryotic structures such as anammoxosomes and pirellulosomes. Excludes the plasma membrane." ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NIF_Subcellular:sao1539965131" ,
+                                                                                                     "Wikipedia:Organelle" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> "cellular_component" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#id> "GO:0043226" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#goslim_chembl> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_generic> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_pir> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#gosubset_prok> ;
+                                            rdfs:label "organelle" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0043226> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "Organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, and prokaryotic structures such as anammoxosomes and pirellulosomes. Excludes the plasma membrane." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:go_curators"^^xsd:string
+ ] .
+
+
+###  http://purl.obolibrary.org/obo/GO_0043227
+<http://purl.obolibrary.org/obo/GO_0043227> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/GO_0043226> ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000115> "Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane. Includes the nucleus, mitochondria, plastids, vacuoles, and vesicles. Excludes the plasma membrane." ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NIF_Subcellular:sao414196390" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "membrane-enclosed organelle" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> "cellular_component" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#id> "GO:0043227" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#gosubset_prok> ;
+                                            rdfs:label "membrane-bounded organelle" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0043227> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane. Includes the nucleus, mitochondria, plastids, vacuoles, and vesicles. Excludes the plasma membrane." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:go_curators"^^xsd:string
+ ] .
+
+
+###  http://purl.obolibrary.org/obo/GO_0043229
+<http://purl.obolibrary.org/obo/GO_0043229> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/GO_0043226> ,
+                                                            <http://purl.obolibrary.org/obo/GO_0044424> ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000115> "Organized structure of distinctive morphology and function, occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> "cellular_component" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#id> "GO:0043229" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#goslim_pir> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#gosubset_prok> ;
+                                            rdfs:label "intracellular organelle" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0043229> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "Organized structure of distinctive morphology and function, occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:go_curators"^^xsd:string
+ ] .
+
+
+###  http://purl.obolibrary.org/obo/GO_0043231
+<http://purl.obolibrary.org/obo/GO_0043231> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/GO_0043227> ,
+                                                            <http://purl.obolibrary.org/obo/GO_0043229> ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000115> "Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane and occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, and vesicles. Excludes the plasma membrane." ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "intracellular membrane-enclosed organelle" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> "cellular_component" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#id> "GO:0043231" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#goslim_pir> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#gosubset_prok> ;
+                                            rdfs:label "intracellular membrane-bounded organelle" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0043231> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane and occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, and vesicles. Excludes the plasma membrane." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:go_curators"^^xsd:string
+ ] .
+
+
+###  http://purl.obolibrary.org/obo/GO_0044424
+<http://purl.obolibrary.org/obo/GO_0044424> rdf:type owl:Class ;
+                                            owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/GO_0005575>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
+                                                                                         owl:someValuesFrom <http://purl.obolibrary.org/obo/GO_0005622>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/GO_0044464> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
+                                                              owl:someValuesFrom <http://purl.obolibrary.org/obo/GO_0005622>
+                                                            ] .
+
+
+###  http://purl.obolibrary.org/obo/GO_0044464
+<http://purl.obolibrary.org/obo/GO_0044464> rdf:type owl:Class ;
+                                            owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/GO_0005575>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
+                                                                                         owl:someValuesFrom <http://purl.obolibrary.org/obo/GO_0005623>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/GO_0005575> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
+                                                              owl:someValuesFrom <http://purl.obolibrary.org/obo/GO_0005623>
+                                                            ] .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement
+rdf:Statement rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.obolibrary.org/obo/GO_0005622
+<http://purl.obolibrary.org/obo/GO_0005622> rdf:type owl:NamedIndividual .
+
+
+###  http://purl.obolibrary.org/obo/GO_0005623
+<http://purl.obolibrary.org/obo/GO_0005623> rdf:type owl:NamedIndividual .
+
+
+###  http://purl.obolibrary.org/obo/GO_0044424
+<http://purl.obolibrary.org/obo/GO_0044424> rdf:type owl:NamedIndividual ;
+                                            <http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0005622> .
+
+
+###  http://purl.obolibrary.org/obo/GO_0044464
+<http://purl.obolibrary.org/obo/GO_0044464> rdf:type owl:NamedIndividual ;
+                                            <http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0005623> .
+
+
+[ rdf:type rdf:Statement ;
+  <http://w3id.org/owl1g/interpretation> <http://w3id.org/owl1g/AllSomeInterpretation>
+] .
+
+[ rdf:type rdf:Statement ;
+   <http://w3id.org/owl1g/interpretation> <http://w3id.org/owl1g/AllSomeInterpretation>
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.obolibrary.org/obo/GO_0005622> <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#goslim_plant> ;
+                                             <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "internal to cell" ;
+                                             <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "nucleocytoplasm" ;
+                                             <http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> "cellular_component" ;
+                                             <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#goslim_metagenomics> ;
+                                             <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "Wikipedia:Intracellular" ;
+                                             <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#goslim_pir> ;
+                                             <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "protoplasm" ;
+                                             <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#goslim_chembl> ,
+                                                                                                     <http://purl.obolibrary.org/obo/go-test#gosubset_prok> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." ;
+                                             rdfs:label "intracellular" ;
+                                             <http://www.geneontology.org/formats/oboInOwl#id> "GO:0005622" ;
+                                             <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#goslim_generic> ;
+                                             <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "protoplast" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0005622> ;
+   owl:annotatedProperty <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> ;
+   owl:annotatedTarget "nucleocytoplasm" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah"^^xsd:string
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0005622> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0198506732"^^xsd:string
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0005622> ;
+   owl:annotatedProperty <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> ;
+   owl:annotatedTarget "protoplast" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah"^^xsd:string
+ ] .
+
+
+<http://purl.obolibrary.org/obo/GO_0005623> <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#goslim_plant> ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "Wikipedia:Cell_(biology)" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> "cellular_component" ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000115> "The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope." ;
+                                            <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#gosubset_prok> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goslim_chembl> ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000589> "cell and encapsulating structures" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#id> "GO:0005623" ;
+                                            rdfs:label "cell" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NIF_Subcellular:sao1813327414" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#goslim_generic> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0005623> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:go_curators"^^xsd:string
+ ] .
+
+
+<http://purl.obolibrary.org/obo/GO_0044424> <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#gocheck_do_not_annotate> ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> "cellular_component" ;
+                                            rdfs:label "intracellular part" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#goantislim_grouping> ;
+                                            rdfs:comment "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC." ;
+                                            <http://www.geneontology.org/formats/oboInOwl#id> "GO:0044424" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#gosubset_prok> ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000115> "Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0044424> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:jl"^^xsd:string
+ ] .
+
+
+<http://purl.obolibrary.org/obo/GO_0044464> rdfs:label "cell part" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "protoplast" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#goslim_pir> ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "cellular subcomponent" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NIF_Subcellular:sao628508602"^^xsd:string ;
+                                            <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#gosubset_prok> ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> "cellular_component" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/go-test#gocheck_do_not_annotate> ,
+                                                                                                    <http://purl.obolibrary.org/obo/go-test#goantislim_grouping> ;
+                                            <http://www.geneontology.org/formats/oboInOwl#id> "GO:0044464" ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000115> "Any constituent part of a cell, the basic structural and functional unit of all organisms." ;
+                                            rdfs:comment "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0044464> ;
+   owl:annotatedProperty <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> ;
+   owl:annotatedTarget "protoplast" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah"^^xsd:string
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0044464> ;
+   owl:annotatedProperty <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> ;
+   owl:annotatedTarget "cellular subcomponent" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NIF_Subcellular:sao628508602"^^xsd:string
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/GO_0044464> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
+   owl:annotatedTarget "Any constituent part of a cell, the basic structural and functional unit of all organisms." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:jl"^^xsd:string
+ ] .
+
+
+###  Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi

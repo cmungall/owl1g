@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Chris Mungall" />
+  <meta name="date" content="2020-05-13" />
+  <title>OWLStar: Web Ontology Semantics for RDF* and Property Graphs</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">OWLStar: Web Ontology Semantics for RDF* and Property Graphs</h1>
+  <p class="author">
+Chris Mungall
+  </p>
+  <p class="date">2020-05-13</p>
+</div>
+<div id="owl1g" class="slide section level1">
+<h1>OWLStar</h1>
+<ul>
+<li>proposed vocabulary allows edges in <a href="https://neo4j.com/developer/graph-database/">Property Graphs</a>
+<ul>
+<li>e.g Neo4j</li>
+<li><a href="https://blog.liu.se/olafhartig/2019/01/10/position-statement-rdf-star-and-sparql-star/">RDF*</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="a-tale-of-two-graphs" class="slide section level1">
+<h1>A tale of two graphs…</h1>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h2 id="rdf-graphs">RDF Graphs</h2>
+<ul>
+<li><code>&lt;s p o&gt;</code></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h2 id="property-graphs">Property Graphs</h2>
+<ul>
+<li>edges have properties</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="why-not-use-existing-owl-to-rdf-mapping" class="slide section level1">
+<h1>Why not use existing OWL to RDF mapping?</h1>
+<ul>
+<li><a href="https://www.w3.org/TR/owl2-mapping-to-rdf/">current OWL layering on RDF</a></li>
+</ul>
+<p>Because:</p>
+<p><img src="https://douroucouli.files.wordpress.com/2019/07/z.png" /></p>
+</div>
+<div id="quick-introduction" class="slide section level1">
+<h1>Quick introduction</h1>
+<p>the idea is to be able to use Property Graphs (PGs) to encode ontological knowledge in a more precise way.</p>
+<p>We use RDF* (RDFStar) as the property graph syntax. The idea is to write ontological assertions (<a href="https://www.w3.org/TR/owl-primer/#Modeling_Knowledge:_Basic_Notions">axioms</a>) as single edges, such as:</p>
+<pre class="turtle"><code>&lt;&lt;:finger :part-of :hand&gt;&gt; owl1g:interpretation owl1g:AllSomeInterpretation .</code></pre>
+<p>Where <code>finger</code> and <code>hand</code> are classes (e.g from an ontology such as <a href="http://obofoundry.org/ontology/uberon">uberon</a>), and the edge is to be interpreted as “every finger is part of some hand”.</p>
+<p>This could be encoded and visualized in a standard PG database such as Neo4j as:</p>
+<p><img src="https://douroucouli.files.wordpress.com/2019/07/mungalls-ontology-design-guidelines-8.png" /></p>
+</div>
+<div id="test" class="slide section level1">
+<h1>test</h1>
+<p>::: incremental</p>
+<ul>
+<li>foo</li>
+<li>bar</li>
+</ul>
+</div>
+</body>
+</html>
