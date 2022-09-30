@@ -1,5 +1,7 @@
 # Owl1g: Ontological Interpretations for Web Property Graphs
 
+__NOTE__ this is an evolution of owlstar, based on rdfstar. Some parts of these docs still refer to rdftar, this is in the process of being migrated to 1g
+
 This repo holds the [owl1g.ttl](owl1g.ttl) vocabulary. This
 proposed vocabulary allows edges in [Property Graphs](https://neo4j.com/developer/graph-database/) (e.g Neo4j, [RDF*](https://blog.liu.se/olafhartig/2019/01/10/position-statement-rdf-star-and-sparql-star/)) to be
 augmented with edge properties that specify ontological semantics,
